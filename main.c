@@ -6,7 +6,7 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 03:34:21 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/24 06:09:13 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/24 19:56:52 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		main(int argc, char **argv)
 {
 	char	board[6][6];
 	char	value;
-	
+
 	value = '4';
 	if (check_input(argc, argv))
     {

@@ -6,7 +6,7 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 03:34:46 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/24 05:03:07 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/24 19:54:32 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,29 +110,29 @@ int		ch_rt(char board[6][6], int *pos)
 	return (0);
 }
 
-int		check_position(char bd[6][6], int *pos, char var)
+int		check_position(char bd[6][6], int *p, char var)
 {
 	int		index;
 
 	index = 1;
-	if (bd[pos[0]][pos[1]] != '0')
+	if (bd[p[0]][p[1]] != '0')
 		return (1);
 	while (index < 5)
 	{
-		if (bd[pos[0]][index] == var && pos[1] != index)
+		if (bd[p[0]][index] == var && p[1] != index)
 			return (1);
 		index++;
 	}
 	index = 1;
 	while (index < 5)
 	{
-		if (bd[index][pos[1]] == var && pos[0] != index)
+		if (bd[index][p[1]] == var && p[0] != index)
 			return (1);
 		index++;
 	}
 	if (var == '2')
 	{
-		if (ch_up(bd,pos) || ch_dw(bd,pos) || ch_lf(bd,pos) || ch_rt(bd,pos))
+		if (ch_up(bd, p) || ch_dw(bd, p) || ch_lf(bd, p) || ch_rt(bd, p))
 			return (1);
 	}
 	return (0);

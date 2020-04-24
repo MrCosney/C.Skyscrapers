@@ -6,7 +6,7 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 04:48:19 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/24 06:11:52 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/24 19:57:44 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ void	ft_putchar(char c);
 void	print(char board[6][6])
 {
 	int		i;
-    int		j;
+	int		j;
 
 	i = 1;
 	while (i < 5)
