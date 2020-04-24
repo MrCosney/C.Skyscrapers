@@ -7,7 +7,7 @@ Dear Evaluator, please note that my program solve any size since to 3x3 - 6x6 in
 If you want to check it and you have a really good patience:
 
 Remove folow part from main.c 
-![alt tag](https://vk.com/im?peers=18525870_222525444_c73&sel=228316419&z=photo228316419_457244502%2Fmail389528)
+![alt tag](https://sun1-27.userapi.com/70uzPdDXychNvnKKeyFIn_0EYCBbhmoKuOu08A/oQOEMsaGjMo.jpg)
 
 # TOWERS
 
