@@ -1,12 +1,13 @@
 # BREAF INSTRUCTION
 
-Dear Evaluator, please note that my program solve any size since to **_3x3 - 6x6_** included in normal time ~20 sec. 
+Dear **Evaluator**, please note that my program solve any size since to **_3x3 - 6x6_** included in normal time ~20 sec. 
 
-6x6 - 9x9 temporarily off because of long computation time. BUT IT CAN SOLVE IT!
+6x6 - 9x9 temporarily off because of long computation time. **_BUT IT CAN SOLVE IT!_**
 
 If you want to check it and you have a really good patience:
 
-Remove folow part from main.c 
+Remove or comment folow part from **_main.c_** 
+
 ![alt tag](https://sun1-27.userapi.com/70uzPdDXychNvnKKeyFIn_0EYCBbhmoKuOu08A/oQOEMsaGjMo.jpg)
 
 # TOWERS
