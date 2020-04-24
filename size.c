@@ -6,15 +6,17 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 03:34:21 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/24 23:17:36 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/24 23:34:53 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		size(char **argv)
+int		size(int argc, char **argv)
 {
 	int		i;
 
 	i = 0;
+	if (argc != 2)
+		return (-1);
 	while (argv[1][i] != '\0')
 		i++;
 	if (((i + 1) % 8) != 0)

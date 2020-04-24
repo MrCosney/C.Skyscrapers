@@ -6,7 +6,7 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 03:34:21 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/24 22:42:57 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/24 23:34:17 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ void	print(char	board[][9], int k);
 void	ft_putstr(char *str);
 int		solution(char board[][9], char x, int k);
 int		check_input(int argc, char **argv, int k);
-int		size(char **argv);
+int		size(int argc, char **argv);
 
 
 int		main(int argc, char **argv)
@@ -24,7 +24,7 @@ int		main(int argc, char **argv)
 	char	value;
 	int		j;
 
-	j = size(argv);
+	j = size(argc, argv);
 	if (j > 6)
 	{
 		ft_putstr("Sorry, it can solve 7x7 or more, but comp. time is huge\n");
