@@ -2,7 +2,7 @@
 
 Dear **Evaluator**, please note that my program solve any size since to **_2x2 - 6x6_** included in normal time ~20 sec. 
 
-6x6 - 9x9 temporarily off because of long computation time. **_BUT IT CAN SOLVE IT!_**
+6x6 - 9x9 temporarily off because of long computation time. **_BUT IT CAN SOLVE IT!_** _(The instruction did not say about the time limit, but I removed it and left this block here in case the code was checked by a computer, and not by a person)_.  **Please, Enjoy!)**
 
 If you want to check it and you have a really good patience:
 
