@@ -6,11 +6,12 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 04:21:15 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/24 05:06:20 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/24 06:11:25 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+int		*empty_spots(char board[6][6], int *pos, char var);
+int		check_position(char board[6][6], int *pos, char var);
 
 int		solution(char board[6][6], char x)
 {

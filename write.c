@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print.c                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/24 04:48:19 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/24 05:14:01 by cosney           ###   ########.fr       */
+/*   Created: 2020/04/15 17:39:05 by cosney            #+#    #+#             */
+/*   Updated: 2020/04/24 06:09:57 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void	print(char board[6][6])
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+void	ft_putstr(char *str)
 {
 	int		i;
-    int		j;
 
-	i = 1;
-	while (i < 5)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		j = 1;
-		while (j < 5)
-		{
-			printf ("%c", board[i][j]);
-			if (j != 4)
-				printf (" ");
-			j++;
-		}
-		printf ("\n");
+		write(1, &str[i], 1);
 		i++;
 	}
 }

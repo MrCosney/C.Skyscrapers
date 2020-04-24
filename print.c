@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   print.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/24 03:34:21 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/24 05:23:05 by cosney           ###   ########.fr       */
+/*   Created: 2020/04/24 04:48:19 by cosney            #+#    #+#             */
+/*   Updated: 2020/04/24 06:11:52 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
-#include "stdio.h"
+void	ft_putchar(char c);
 
-int		main(int argc, char **argv)
+void	print(char board[6][6])
 {
-	char	board[6][6];
-	char	value;
 	int		i;
+    int		j;
 
-	value = '4';
-	if (check_input(argc, argv))
-    {
-		printf ("Error\n");
-		return (0);
-	}
-	viewtable(argv, board);
-	if (solution(board, value))
+	i = 1;
+	while (i < 5)
 	{
-		printf("Error\n");
-		return (0);
+		j = 1;
+		while (j < 5)
+		{
+			ft_putchar(board[i][j]);
+			if (j != 4)
+				ft_putchar(' ');
+			j++;
+		}
+		ft_putchar('\n');
+		i++;
 	}
-	print(board);
-	return (0);
 }
