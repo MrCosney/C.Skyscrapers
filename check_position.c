@@ -6,7 +6,7 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 03:34:46 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/24 22:58:35 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/24 23:11:33 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int		ch_l(char board[][9], int *pos, int k)
 	if (j != (board[pos[0]][0] - '0'))
 		return (1);
 	return (0);
-}	
+}
 
 int		ch_r(char board[][9], int *pos, int k)
 {

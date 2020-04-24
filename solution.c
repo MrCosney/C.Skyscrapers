@@ -6,7 +6,7 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 04:21:15 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/24 06:11:25 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/24 23:15:38 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int		check_position(char board[][9], int *pos, char var, int k);
 
 int		solution(char board[][9], char x, int k)
 {
-	int	 pos[2];
+	int		pos[2];
 
     empty_spots(board, pos, x, k);
 	if (pos[0] == -1)
@@ -25,7 +25,7 @@ int		solution(char board[][9], char x, int k)
 	empty_spots(board, pos, x, k);
 	while (pos[1] < (k + 1))
 	{
-		if (check_position(board, pos, x, k) == 0 && board[pos[0]][pos[1]] == '0')
+		if (check_position(board, pos, x, k) == 0)
 		{
 			board[pos[0]][pos[1]] = x;
 			if (!solution(board, x, k))
