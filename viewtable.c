@@ -6,62 +6,66 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 03:35:10 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/24 19:33:39 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/24 22:55:17 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	view_up(char **argv, char board[6][6], int i, int c)
+void	view_up(char **argv, char board[][9], int k, int c, int i)
 {
+	while (i < (4 * k))
+	{
+		board[k + 1][c] = argv[1][i];
+		if (board[k + 1][c] == '1')
+		    board[k][c] = k + '0';
+		i = i + 2;
+		c++;
+	}
 	c = 1;
-	while (i < 24)
+	while (i < (6 * k))
     {
 		board[c][0] = argv[1][i];
+		if (board[c][0] == '1')
+		    board[c][1] = k + '0';
 		i = i + 2;
 		c++;
 	}
 	c = 1;
-	while (i < 32)
+	while (i < (8 * k))
 	{
-		board[c][5] = argv[1][i];
+		board[c][k + 1] = argv[1][i];
+		if (board[c][k + 1] == '1')
+		    board[c][k] = k + '0';
 		i = i + 2;
 		c++;
 	}
+}
+
+void	viewtable(char **argv, char board[][9], int k)
+{
+	int		i;
+	int		c;
+
 	i = 1;
-	while (i < 5)
+	while (i < (k + 1))
 	{
 		c = 1;
-		while (c < 5)
+		while (c < (k + 1))
 		{
 			board[i][c] = '0';
 			c++;
 		}
 		i++;
 	}
-}
-
-void	viewtable(char **argv, char board[6][6])
-{
-	int		i;
-	int		c;
-
 	i = 0;
 	c = 1;
-	while (i < 8)
+	while (i < (2 * k))
 	{
 		board[0][c] = argv[1][i];
+		if (board[0][c] == '1')
+		    board[1][c] = k + '0';
 		i = i + 2;
 		c++;
 	}
 	c = 1;
-	while (i < 16)
-	{
-		board[5][c] = argv[1][i];
-		i = i + 2;
-		c++;
-	}
-	view_up(argv, board, i, c);
-	board[0][0] = '.';
-	board[5][5] = '.';
-	board[0][5] = '.';
-    board[5][0] = '.';
+	view_up(argv, board, k, c, i);
 }

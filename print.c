@@ -6,25 +6,25 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 04:48:19 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/24 19:57:44 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/24 06:11:52 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 
-void	print(char board[6][6])
+void	print(char board[][9], int k)
 {
 	int		i;
-	int		j;
+    int		j;
 
 	i = 1;
-	while (i < 5)
+	while (i < (k + 1))
 	{
 		j = 1;
-		while (j < 5)
+		while (j < (k + 1))
 		{
 			ft_putchar(board[i][j]);
-			if (j != 4)
+			if (j != k)
 				ft_putchar(' ');
 			j++;
 		}

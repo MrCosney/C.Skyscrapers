@@ -6,11 +6,11 @@
 /*   By: cosney <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/24 03:34:46 by cosney            #+#    #+#             */
-/*   Updated: 2020/04/24 19:54:32 by cosney           ###   ########.fr       */
+/*   Updated: 2020/04/24 22:58:35 by cosney           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ch_up(char board[6][6], int *pos)
+int		ch_up(char board[][9], int *pos, int k)
 {
 	int		i;
 	int		j;
@@ -20,7 +20,7 @@ int		ch_up(char board[6][6], int *pos)
 	j = 1;
 	max = '$';
 	board[pos[0]][pos[1]] = '2';
-	while (board[i][pos[1]] != '4')
+	while (board[i][pos[1]] != k + '0')
 	{
 		if (board[i][pos[1]] > max)
 		{
@@ -35,17 +35,17 @@ int		ch_up(char board[6][6], int *pos)
 	return (0);
 }
 
-int		ch_dw(char board[6][6], int *pos)
+int		ch_dw(char board[][9], int *pos, int k)
 {
 	int		i;
 	int		j;
 	char	max;
 
-	i = 4;
+	i = k;
 	j = 1;
 	max = '$';
 	board[pos[0]][pos[1]] = '2';
-	while (board[i][pos[1]] != '4')
+	while (board[i][pos[1]] != k + '0')
 	{
 		if (board[i][pos[1]] > max)
 		{
@@ -55,12 +55,12 @@ int		ch_dw(char board[6][6], int *pos)
 		i--;
 	}
 	board[pos[0]][pos[1]] = '0';
-	if (j != (board[5][pos[1]] - '0'))
+	if (j != (board[k + 1][pos[1]] - '0'))
 		return (1);
 	return (0);
 }
 
-int		ch_lf(char board[6][6], int *pos)
+int		ch_l(char board[][9], int *pos, int k)
 {
 	int		i;
 	int		j;
@@ -70,7 +70,7 @@ int		ch_lf(char board[6][6], int *pos)
 	j = 1;
 	max = '$';
 	board[pos[0]][pos[1]] = '2';
-	while (board[pos[0]][i] != '4')
+	while (board[pos[0]][i] != k + '0')
 	{
 		if (board[pos[0]][i] > max)
 		{
@@ -85,17 +85,17 @@ int		ch_lf(char board[6][6], int *pos)
 	return (0);
 }	
 
-int		ch_rt(char board[6][6], int *pos)
+int		ch_r(char board[][9], int *pos, int k)
 {
 	int		i;
 	int		j;
 	char	max;
 
-	i = 4;
+	i = k;
 	j = 1;
 	max = '$';
 	board[pos[0]][pos[1]] = '2';
-	while (board[pos[0]][i] != '4')
+	while (board[pos[0]][i] != k + '0')
 	{
 		if (board[pos[0]][i] > max)
 		{
@@ -105,34 +105,34 @@ int		ch_rt(char board[6][6], int *pos)
 		i--;
 	}
 	board[pos[0]][pos[1]] = '0';
-	if (j != (board[pos[0]][5] - '0'))
+	if (j != (board[pos[0]][k + 1] - '0'))
 		return (1);
 	return (0);
 }
 
-int		check_position(char bd[6][6], int *p, char var)
+int		check_position(char b[][9], int *p, char var, int k)
 {
 	int		index;
 
 	index = 1;
-	if (bd[p[0]][p[1]] != '0')
+	if (b[p[0]][p[1]] != '0')
 		return (1);
-	while (index < 5)
+	while (index < (k + 1))
 	{
-		if (bd[p[0]][index] == var && p[1] != index)
+		if (b[p[0]][index] == var && p[1] != index)
 			return (1);
 		index++;
 	}
 	index = 1;
-	while (index < 5)
+	while (index < (k + 1))
 	{
-		if (bd[index][p[1]] == var && p[0] != index)
+		if (b[index][p[1]] == var && p[0] != index)
 			return (1);
 		index++;
 	}
 	if (var == '2')
 	{
-		if (ch_up(bd, p) || ch_dw(bd, p) || ch_lf(bd, p) || ch_rt(bd, p))
+		if (ch_up(b, p, k) || ch_dw(b, p, k) || ch_l(b, p, k) || ch_r(b, p, k))
 			return (1);
 	}
 	return (0);

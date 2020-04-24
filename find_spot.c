@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int		*empty_spots(char board[6][6], int *pos, char n)
+int		*empty_spots(char board[][9], int *pos, char n, int k)
 {
 	int x;
 	int y;
@@ -18,11 +18,11 @@ int		*empty_spots(char board[6][6], int *pos, char n)
 	int count;
 
 	x = 1;
-	while (x < 5)
+	while (x < (k + 1))
 	{
 		count = 0;
 		j = 1;
-		while (j < 5)
+		while (j < (k + 1))
 		{
 			if (board[x][j] == n)
 				count++;
@@ -31,7 +31,7 @@ int		*empty_spots(char board[6][6], int *pos, char n)
 		if (count < 1)
 		{
 			y = 1;
-			while (y < 5)
+			while (y < (k + 1))
 			{
 				if (board[x][y] == '0')
 				{
