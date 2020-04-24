@@ -1,6 +1,6 @@
 # BREAF INSTRUCTION
 
-Dear Evaluator, please note that my program solve any size since to 3x3 - 6x6 included in normal time ~20 sec. 
+Dear Evaluator, please note that my program solve any size since to **_3x3 - 6x6_** included in normal time ~20 sec. 
 
 6x6 - 9x9 temporarily off because of long computation time. BUT IT CAN SOLVE IT!
 
